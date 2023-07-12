@@ -21,7 +21,7 @@ Například `https://keyguru.app/api/v1/self`
 
 Keyguru API je založeno na [OpenAPI 3.0.0](https://swagger.io/specification/v3/). Každý požadavek musí být autorizován
 pomocí API klíče v hlavičce `X-Api-Key`. Pro získání API klíče se na nás oobraťe na
-[support@keyguru.cz](mailto:support@keyguru.cz).
+[helpdesk@keyguru.cz](mailto:helpdesk@keyguru.cz).
 
 Funkci API můžete testovat pomocí [webového rozhraní Swagger](https://keyguru.app/api/ui/), které poskytuje stručný
 popis jednotlivých [endpointů](#api-endpointy). Tento průvodce poskytuje širší souvislosti.
