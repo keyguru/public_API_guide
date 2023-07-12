@@ -20,7 +20,7 @@ The API server address is `https://keyguru.app/api/` supplemented by the [partic
 For example `https://keyguru.app/api/v1/self`
 
 Keyguru API is built on [OpenAPI 3.0.0](https://swagger.io/specification/v3/). Every request must be authorized by the
-API key in the `X-Api-Key` header. Please contact us at [support@keyguru.cz](mailto:support@keyguru.cz)
+API key in the `X-Api-Key` header. Please contact us at [helpdesk@keyguru.cz](mailto:helpdesk@keyguru.cz)
 to get your API key.
 
 The functionality of the API can be tested using the [Swagger web interface](https://keyguru.app/api/ui/), which also
