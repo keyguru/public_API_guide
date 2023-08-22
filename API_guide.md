@@ -2,17 +2,21 @@
 
 # Keyguru API guide
 
-API version: **2.2.0**<br>
-API release date: **2022-12-01**<br>
+API version: **2.2.1**<br>
+API release date: **2023-08-22**<br>
 [Swagger web interface](https://keyguru.app/api/ui/)
 
----
-**New in version 2.2.0**
+## Changelog
 
-- A new endpoint "[**PATCH drawer reservation**](#patch-drawer-reservation)" was added. It allows a **full update of a
+### 2023-08-22 / API version 2.2.1
+
+* Timestamps in **[device history](#post-device-identification-history)** now represent the moment the event occurred
+  instead of the moment the event was received on the server.
+
+### 2022-12-01 / API version 2.2.0
+
+* New endpoint "[**PATCH drawer reservation**](#patch-drawer-reservation)" was added. It allows a **full update of a
   particular reservation**.
-
----
 
 ## Introduction
 
@@ -175,10 +179,6 @@ This function returns the **history of the device**. All events associated with 
 
 - time range limit (default: all events)
 - maximum number of items (default: 1000)
-
-**NOTICE:** An event from the device gets its timestamp when it arrives on our server. The timestamp does not represent
-the moment the event happened in the device. The delay is usually less than 1 minute as long as the device is online. We
-will fix this in the future.
 
 ### [GET drawer](https://keyguru.app/api/ui/#/default/get_v1_device__deviceIdentification__drawer)
 

@@ -2,17 +2,20 @@
 
 # Keyguru API průvodce
 
-Verze API: **2.2.0**<br>
-Datum vydání API: **2022-12-01**<br>
+Verze API: **2.2.1**<br>
+Datum vydání API: **2023-08-22**<br>
 [Webové rozhraní Swagger](https://keyguru.app/api/ui/)
 
----
-**Novinky ve verzi 2.2.0**
+## Změny
 
-- Byl přidán nový endpoint "[**PATCH drawer reservation**](#patch-drawer-reservation)", který umožňuje **úplnou změnu
-  rezervace**.
+### 2023-08-22 / API verze 2.2.1
 
----
+* Časová razítka v **[historii zařízení](#post-device-identification-history)** nyní vyjadřují okamžik, kdy událost
+  nastala, namísto okamžiku, kdy byla událost přijata na serveru.
+
+### 2022-12-01 / API verze 2.2.0
+
+* Nový endpoint "[**PATCH drawer reservation**](#patch-drawer-reservation)", který umožňuje **úplnou změnu rezervace**.
 
 ## Úvod
 
@@ -170,10 +173,6 @@ Tato funkce vrací **historii zařízení**. Vypíše všechny události spojen�
 
 - omezení časového rozmezí (výchozí: všechny události)
 - omezení počtu položek (výchozí: 1000)
-
-**UPOZORNĚNÍ:** Událost ze zařízení obdrží své časové razítko až ve chvíli, kdy dorazí na náš server. Zpoždění časového
-razítka je obvykle kratší, než 1 minuta. Může však být podstatně delší, pokud zařízení ztratí připojení k internetu.
-Toto chování v budoucnu opravíme.
 
 ### [GET drawer](https://keyguru.app/api/ui/#/default/get_v1_device__deviceIdentification__drawer)
 
