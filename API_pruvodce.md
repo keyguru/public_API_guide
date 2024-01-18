@@ -1,12 +1,16 @@
-<img height="30" src="logo.svg" title="Keyguru logo" width="200"/>
+<img height="30" src="logo.svg" title="Keyguru logo" alt="Keyguru logo" width="200"/>
 
 # Keyguru API průvodce
 
-Verze API: **2.2.1**<br>
-Datum vydání API: **2023-08-22**<br>
+Verze API: **2.2.2**<br>
+Datum vydání API: **2024-01-18**<br>
 [Webové rozhraní Swagger](https://keyguru.app/api/ui/)
 
 ## Změny
+
+### 2024-01-18 / API verze 2.2.2
+
+* Minimální požadovaná délka rezervace byla zkrácena na 1 minutu (dříve 1 hodina).
 
 ### 2023-08-22 / API verze 2.2.1
 
@@ -243,7 +247,7 @@ jedné přihrádky se nesmí překrývat. Pokud není k dispozici žádná voln�
 - název rezervace
 - začátek platnosti rezervace
 - konec platnosti rezervace
-    - minimální trvání: 1 hodina
+    - minimální trvání: 1 minuta
 
 **Volitelné parametry:**
 
@@ -263,7 +267,7 @@ Jestli potřebujete vytvořit novou rezervaci v **konkrétní přihrádkce**, po
 `/v1/device/{deviceIdentification}/reservation-list`
 
 Tato funkce vrací **všechny rezervace v zařízení** podobně, jako funkce
-[**GET device reservation**](#get-device-resevation) s tím rozdílem, že tato funkce navíc umožňuje **filtrování** a
+[**GET device reservation**](#get-device-reservation) s tím rozdílem, že tato funkce navíc umožňuje **filtrování** a
 **zobrazení smazaných rezervací**.
 
 **Povinné parametry:**
@@ -325,7 +329,7 @@ nesmí překrývat. Pokud přihrádka není volná, funkce vrátí chybu.
 - název rezervace
 - začátek platnosti rezervace
 - konec platnosti rezervace
-    - minimální trvání: 1 hodina
+    - minimální trvání: 1 minuta
 
 **Volitelné parametry:**
 
@@ -345,7 +349,7 @@ Jestli potřebujete **automaticky vyhledat volnou přihrádku v rámci zařízen
 `/v1/device/{deviceIdentification}/drawer/{drawerIdentification}/reservation-list`
 
 Tato funkce vrací **všechny rezervace v konkrétní přihrádce** zařízení podobně, jako funkce
-[**GET drawer reservation**](#get-drawer-resevation) s tím rozdílem, že tato funkce navíc umožňuje **filtrování** a
+[**GET drawer reservation**](#get-drawer-reservation) s tím rozdílem, že tato funkce navíc umožňuje **filtrování** a
 **zobrazení smazaných rezervací**.
 
 **Povinné parametry:**
@@ -392,7 +396,7 @@ Tato funkce umožňuje úplnou **změnu existující rezervace**. Jeden nebo ví
 - název nebo ID nové přihrádky
 - nový začátek platnosti rezervace
 - nový konec platnosti rezervace
-    - minimální trvání: 1 hodina
+    - minimální trvání: 1 minuta
 - nová poznámka k rezervaci
 
 ### [DELETE reservation](https://keyguru.app/api/ui/#/default/delete_v1_device__deviceIdentification__drawer__drawerIdentification__reservation__reservationId_)

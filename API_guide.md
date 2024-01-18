@@ -1,12 +1,16 @@
-<img height="30" src="logo.svg" title="Keyguru logo" width="200"/>
+<img height="30" src="logo.svg" title="Keyguru logo" alt="Keyguru logo" width="200"/>
 
 # Keyguru API guide
 
-API version: **2.2.1**<br>
-API release date: **2023-08-22**<br>
+API version: **2.2.2**<br>
+API release date: **2024-01-18**<br>
 [Swagger web interface](https://keyguru.app/api/ui/)
 
 ## Changelog
+
+### 2024-01-18 / API version 2.2.2
+
+* Minimum required reservation duration is now only 1 minute (originally 1 hour).
 
 ### 2023-08-22 / API version 2.2.1
 
@@ -96,7 +100,7 @@ _Devices_ and _drawers_ can have custom names. They can be called either by thei
 - The _device_ name must be unique within the customer.
 - The _drawer_ name must be unique within the _device_.
 
-The reservation name **does not have** to be unique (eg. "Smith"). Therefore, the reservation can only be addressed by
+The reservation name **does not have** to be unique (e.g. "Smith"). Therefore, the reservation can only be addressed by
 its ID.
 
 ### Date and time format
@@ -249,7 +253,7 @@ Reservations within 1 drawer cannot overlap. If there is no free drawer availabl
 - reservation name
 - reservation start date
 - reservation end date
-    - minimum duration: 1 hour
+    - minimum duration: 1 minute
 
 **Optional parameters:**
 
@@ -331,7 +335,7 @@ drawer cannot overlap. If the drawer is not free, the function will return an er
 - reservation name
 - reservation start date
 - reservation end date
-    - minimum duration: 1 hour
+    - minimum duration: 1 minute
 
 **Optional parameters:**
 
@@ -397,7 +401,7 @@ This function allows you to fully **change an existing reservation**. One or mor
     - if not specified, the code **will not be changed**
 - new start date of the reservation
 - new end date of the reservation
-    - minimum duration: 1 hour
+    - minimum duration: 1 minute
 - new note of the reservation
 
 ### [DELETE reservation](https://keyguru.app/api/ui/#/default/delete_v1_device__deviceIdentification__drawer__drawerIdentification__reservation__reservationId_)
